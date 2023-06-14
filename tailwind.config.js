@@ -8,10 +8,29 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        home: 'url("../assets/Hero.svg")',
+        aboutUs: 'url("../assets/AboutUs.svg")',
+        borney: 'url("../assets/Borney.svg")',
+        elsa: 'url("../assets/Elsa.svg")',
+        geourge: 'url("../assets/Geourge.svg")',
+        testimonials: 'url("../assets/Testimonials.svg")',
+        cta: 'url("../assets/CTA.svg")',
       },
+
+      colors: {
+        red: '#FF0000',
+        orange: '#FCA600',
+        gray: '#484848',
+        platinum: '#E2E2E2',
+        antiflash: '#F1F1F1',
+        chinesesilver: '#CCCCCC',
+        chineseblack: '#121212'
+      },
+
+      fontFamily: {
+        poppins: 'var(--font-poppins)',
+        bebas: 'var(--font-bebas)'
+      }
     },
   },
   plugins: [],

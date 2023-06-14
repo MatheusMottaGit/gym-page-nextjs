@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${bebas.variable} font-poppins bg-home bg-cover bg-no-repeat bg-top bg-fixed`}>
+      <body className={`${poppins.variable} ${bebas.variable} font-poppins bg-home bg-cover bg-no-repeat bg-top bg-fixed overflow-x-hidden`}>
         <NavBar />
         {children}
       </body>

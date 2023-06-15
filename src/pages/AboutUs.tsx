@@ -1,9 +1,8 @@
 import React from 'react'
-import Image from 'next/image'
 
-import barGuy from '../assets/BarGuy.svg'
 import Description from '@/components/AboutUs/Description'
 import Title from '@/components/AboutUs/Title'
+import BarGuy from '@/components/AboutUs/BarGuy'
 
 const AboutUs = () => {
   return (
@@ -17,6 +16,8 @@ const AboutUs = () => {
           About us
         </button>
       </div>
+
+      <BarGuy />
 
     </section>
   )

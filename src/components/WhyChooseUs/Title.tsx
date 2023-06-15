@@ -3,7 +3,7 @@ import React from 'react'
 const Title = () => {
   return (
     <div className='flex flex-col items-center justify-center text-center gap-6 font-bebas uppercase text-white'>
-      <h1 className='text-7xl'>
+      <h1 className='text-7xl max-[1075px]:text-5xl'>
         Why <span className='text-red'>choose us</span>
       </h1>
 

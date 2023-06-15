@@ -2,7 +2,7 @@ import React from 'react'
 
 const Presentation = () => {
   return (
-    <div className='flex flex-col items-start gap-4 w-1/2'>
+    <div className='flex flex-col items-start gap-4 w-1/2 max-[1075px]:items-center'>
       <h1 className='uppercase text-white font-bebas text-7xl'>
         Ready to train 
         <br />

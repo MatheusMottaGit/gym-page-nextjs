@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../Button'
 
 const Presentation = () => {
   return (
@@ -13,9 +14,9 @@ const Presentation = () => {
         Gym training is a structured and disciplined approach to physical exercise that focuses on strength, endurance and overall fitness improvement.
       </span>
 
-      <button className='font-bebas uppercase border-[1px] border-red p-4 w-32 text-red mt-8'>
-        Let's join us
-      </button>
+      <Button>
+        Let's join now
+      </Button>
     </div>
   )
 }

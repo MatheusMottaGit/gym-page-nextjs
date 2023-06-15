@@ -7,10 +7,10 @@ import Title from '@/components/Trainers/Title'
 
 const Trainers = () => {
   return (
-    <section className="w-full bg-chineseblack h-screen p-24 flex flex-col items-center justify-center gap-12">
+    <section className="w-full bg-chineseblack h-screen p-24 flex flex-col items-center justify-center gap-12 max-[888px]:h-fit">
       <Title />
 
-      <div className='flex items-center gap-6'>
+      <div className='flex items-center gap-6 max-[888px]:flex-col'>
         <BorneyCard />
 
         <ElsaCard />

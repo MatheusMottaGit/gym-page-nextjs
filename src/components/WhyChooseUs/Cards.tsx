@@ -3,8 +3,8 @@ import CardContainer from './CardContainer'
 
 const Cards = () => {
   return (
-    <div className='w-full h-fit grid grid-cols-2 place-items-center gap-4'>
-      <CardContainer>
+    <div className='w-full h-fit grid grid-cols-2 place-items-center gap-4 max-[808px]:grid-cols-1'>
+      <CardContainer animation=''>
         <h1 className='text-white text-4xl'>01</h1>
         <div className='flex flex-col'>
           <h2 className='text-red text-xl'>Personal training</h2>
@@ -14,7 +14,7 @@ const Cards = () => {
         </div>
       </CardContainer>
 
-      <CardContainer>
+      <CardContainer animation=''>
         <h1 className='text-white text-4xl'>02</h1>
         <div className='flex flex-col'>
           <h2 className='text-red text-xl'>Equipment and facilities</h2>
@@ -24,7 +24,7 @@ const Cards = () => {
         </div>
       </CardContainer>
 
-      <CardContainer>
+      <CardContainer animation=''>
         <h1 className='text-white text-4xl'>03</h1>
         <div className='flex flex-col'>
           <h2 className='text-red text-xl'>Nutrition counseling</h2>
@@ -34,7 +34,7 @@ const Cards = () => {
         </div>
       </CardContainer>
 
-      <CardContainer>
+      <CardContainer animation=''>
         <h1 className='text-white text-4xl'>04</h1>
         <div className='flex flex-col'>
           <h2 className='text-red text-xl'>Speciality programs</h2>

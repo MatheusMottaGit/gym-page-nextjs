@@ -3,8 +3,9 @@ import './globals.css'
 
 import { Poppins } from 'next/font/google'
 import { Bebas_Neue } from 'next/font/google'
+import Footer from '@/components/Footer'
 
-const poppins = Poppins({ subsets: ['latin'], weight: '400', variable: '--font-poppins' })
+const poppins = Poppins({ subsets: ['latin'], weight: '300', variable: '--font-poppins' })
 const bebas = Bebas_Neue({ subsets: ['latin'], weight: '400', variable: '--font-bebas' })
 
 export const metadata = {
@@ -19,9 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${bebas.variable} font-poppins bg-home bg-cover bg-no-repeat bg-top bg-fixed overflow-x-hidden`}>
+      <body className={`${poppins.variable} ${bebas.variable} font-poppins bg-home bg-cover bg-no-repeat bg-top bg-fixed z-0 overflow-x-hidden`}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   )

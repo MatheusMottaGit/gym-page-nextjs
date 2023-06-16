@@ -30,6 +30,17 @@ module.exports = {
       fontFamily: {
         poppins: 'var(--font-poppins)',
         bebas: 'var(--font-bebas)'
+      },
+
+      animation: {
+        slideIn: 'slide 0.5s ease-in'
+      },
+
+      keyframes: {
+        slide: { 
+            '0%': { opacity: 0, marginLeft: '-50px' },
+            '100%': { opacity: 1 }
+         }
       }
     },
   },

@@ -11,14 +11,14 @@ const Footer = () => {
       <div className='w-full p-[72px] border-b-[1px] border-b-white/60 flex flex-col items-center justify-center gap-8'>
         <Logo />
 
-        <NavList isOpen/>
+        <NavList />
       </div>
 
       <div className='p-6 w-full flex items-center justify-between text-xs text-white/60'>
         <span>Privacy | Terms and condition</span>
 
         <span className='flex items-center gap-4'>
-          <CopyrightIcon size={10}/>
+          <CopyrightIcon size={10} />
 
           <span>2023 All rights reserved. IronGym Company</span>
         </span>

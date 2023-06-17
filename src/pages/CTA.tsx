@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import man from '../assets/Man.svg'
 import FormContainer from '@/components/CTA/FormContainer'
+import Form from '@/components/CTA/Form'
 
 const CTA = () => {
   return (
@@ -11,8 +12,10 @@ const CTA = () => {
       <Image 
         src={man} 
         alt=''
+        className='max-[1460px]:hidden'
       />
 
+      <Form />
     </FormContainer>
    </section>
   )

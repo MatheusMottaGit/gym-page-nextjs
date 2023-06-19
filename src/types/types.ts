@@ -5,5 +5,5 @@ export interface Children {
 }
 
 export interface User {
-  
+  name: string
 }

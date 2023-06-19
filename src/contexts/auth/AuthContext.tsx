@@ -1,15 +1,12 @@
 'use client'
 import { api } from "@/api/api";
 import { Children, User } from "@/types/types";
-import { Dispatch, SetStateAction, createContext, useEffect, useState } from "react";
-import { cookies } from 'next/headers'
-import { getCookiesData } from "@/lib/getUser";
+import { createContext, useEffect, useState } from "react";
 
 interface Auth {
  signIn: (email: string, password: string) => void
  signOut: () => void
  signed: boolean
- setUser: Dispatch<SetStateAction<User | null>>
 }
 
 export const AuthContext = createContext<Auth>({} as Auth)
@@ -19,7 +16,17 @@ export const AuthProvider = ({ children }: Children) => {
   const [user, setUser] = useState({} as User | null);
 
   useEffect(() => {
-    getCookiesData()
+    function getStoragedData(){
+
+      const user = localStorage.getItem('user')
+      const token = localStorage.getItem('token')
+    
+      if(user && token){
+        setUser(user)
+      }
+    }
+
+    getStoragedData()
   }, [])
 
   async function signIn(email: string, password: string) {
@@ -34,18 +41,18 @@ export const AuthProvider = ({ children }: Children) => {
 
     api.defaults.headers.common[ "Authorization" ] = `Bearer ${token}`
 
-    cookies().set('token', token)
-    cookies().set('user', response.data.user)
+    localStorage.setItem('token', token)
+    localStorage.setItem('user', response.data.user)
 
   }
 
   function signOut(){
-    cookies().delete('token')
+    localStorage.clear()
     setUser(null)
   }
 
   return (
-    <AuthContext.Provider value={{ signIn, signOut, signed: !!user, setUser }}>
+    <AuthContext.Provider value={{ signIn, signOut, ...user, signed: !!user }}>
       {children}
     </AuthContext.Provider>
   )

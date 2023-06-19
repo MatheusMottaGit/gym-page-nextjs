@@ -33,13 +33,13 @@ module.exports = {
       },
 
       animation: {
-        slideIn: 'slide 0.5s ease-in'
+        slideDownFade: 'slide 0.5s ease-in'
       },
 
       keyframes: {
         slide: { 
-            '0%': { opacity: 0, marginLeft: '-50px' },
-            '100%': { opacity: 1 }
+            '0%': { opacity: 0, transform: 'translateY(-2px)' },
+            '100%': { opacity: 1, transform: 'translateY(0)' }
          }
       }
     },

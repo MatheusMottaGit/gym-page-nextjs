@@ -2,7 +2,9 @@ import React from 'react'
 
 const Plans = () => {
   return (
-    <div>Plans</div>
+    <section className='h-screen w-screen bg-chineseblack'>
+
+    </section>
   )
 }
 

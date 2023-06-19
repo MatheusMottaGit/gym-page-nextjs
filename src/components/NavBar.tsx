@@ -5,6 +5,7 @@ import Logo from './Logo'
 import NavList from './NavList'
 import DropDownMenu from './DropDownMenu'
 import { AuthContext } from '@/contexts/auth/AuthContext'
+import SignInButton from './SignInButton'
 
 const NavBar = () => {
 
@@ -22,7 +23,7 @@ const NavBar = () => {
 
       <NavList />
 
-      {signed ? <DropDownMenu /> : <p>Sign - In</p>}
+      {signed ? <DropDownMenu /> : <SignInButton />}
     </nav>
   )
 }

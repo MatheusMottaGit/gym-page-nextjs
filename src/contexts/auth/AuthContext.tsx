@@ -7,6 +7,7 @@ interface Auth {
  signIn: (email: string, password: string) => void
  signOut: () => void
  signed: boolean
+ user: User | null
 }
 
 export const AuthContext = createContext<Auth>({} as Auth)
@@ -22,7 +23,7 @@ export const AuthProvider = ({ children }: Children) => {
       const token = localStorage.getItem('token')
     
       if(user && token){
-        setUser(user)
+        setUser(JSON.parse(user))
       }
     }
 
@@ -52,7 +53,7 @@ export const AuthProvider = ({ children }: Children) => {
   }
 
   return (
-    <AuthContext.Provider value={{ signIn, signOut, ...user, signed: !!user }}>
+    <AuthContext.Provider value={{ signIn, signOut, user, signed: !!user }}>
       {children}
     </AuthContext.Provider>
   )

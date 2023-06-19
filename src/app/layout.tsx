@@ -1,8 +1,10 @@
-import NavBar from '@/components/NavBar'
 import './globals.css'
 
 import { Poppins } from 'next/font/google'
 import { Bebas_Neue } from 'next/font/google'
+import { AuthProvider } from '@/contexts/auth/AuthContext'
+
+import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 
 const poppins = Poppins({ subsets: ['latin'], weight: '300', variable: '--font-poppins' })
@@ -21,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${bebas.variable} font-poppins bg-home bg-cover bg-no-repeat bg-top bg-fixed z-0 overflow-x-hidden`}>
-        <NavBar />
-        {children}
-        <Footer />
+        <AuthProvider>
+          <NavBar />
+            {children}
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   )

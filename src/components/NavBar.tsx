@@ -4,16 +4,13 @@ import React, { useContext, useState } from 'react'
 import Logo from './Logo'
 import NavList from './NavList'
 import DropDownMenu from './DropDownMenu'
-import { AuthContext } from '@/contexts/auth/AuthContext'
 import SignInButton from './SignInButton'
+import HamburguerMenu from './HamburguerMenu'
 
 const NavBar = () => {
-
-  const { signed } = useContext(AuthContext)
-
   const [isOpen, setIsOpen] = useState(false)
 
-  function handleToggle(){
+  function handleToggle() {
     setIsOpen(!isOpen)
   }
 
@@ -23,7 +20,7 @@ const NavBar = () => {
 
       <NavList />
 
-      {signed ? <DropDownMenu /> : <SignInButton />}
+      <HamburguerMenu />
     </nav>
   )
 }

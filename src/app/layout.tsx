@@ -23,11 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${bebas.variable} font-poppins bg-home bg-cover bg-no-repeat bg-top bg-fixed z-0 overflow-x-hidden`}>
-        <AuthProvider>
-          <NavBar />
-            {children}
-          <Footer />
-        </AuthProvider>
+        <NavBar />
+        {children}
+        <Footer />
       </body>
     </html>
   )
